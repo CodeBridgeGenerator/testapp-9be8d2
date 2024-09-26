@@ -1,0 +1,635 @@
+{
+  "projectName": "testapp",
+  "description": "test 1",
+  "auth": "jwt",
+  "database": {
+    "pathToLogo": {
+      "s": "/assets/applications_logos/mongodb-s.png",
+      "l": "/assets/applications_logos/mongodb.png"
+    },
+    "appName": "mongodb-database",
+    "disabled": false,
+    "type": "database",
+    "name": "mongodb",
+    "label": "MongoDB"
+  },
+  "stack": [
+    {
+      "appName": "nodejs-backend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/nodejs-s.png",
+        "l": "/assets/applications_logos/nodejs.png"
+      },
+      "type": "backend",
+      "name": "nodejs",
+      "label": "Node.js Express Feathers.js"
+    },
+    {
+      "appName": "react-frontend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/react-s.png",
+        "l": "/assets/applications_logos/react.png"
+      },
+      "type": "frontend",
+      "name": "react",
+      "label": "React JavaScript"
+    }
+  ],
+  "services": [
+    {
+      "serviceName": "users",
+      "databaseName": "users",
+      "displayName": "Users",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [],
+      "schemaList": [
+        {
+          "fieldName": "name",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Name",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f4cf57743a898bf29bef05"
+          },
+          "min": 2,
+          "max": 100,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email",
+          "type": "String",
+          "unique": true,
+          "lowercase": true,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Email",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f4cf57743a898bf29bef06"
+          },
+          "min": 5,
+          "max": 150,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "jawatan",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Jawatan",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f4d557743a898bf29bf825"
+          },
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "default": "",
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "password",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": true,
+          "editable": false,
+          "sortable": false,
+          "required": true,
+          "component": "p",
+          "label": "Password",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f4cf57743a898bf29bef07"
+          },
+          "min": 5,
+          "max": 300,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": true,
+      "seeder": [],
+      "skip": true,
+      "downloadable": true,
+      "uploadable": false,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "memo",
+      "databaseName": "memo",
+      "displayName": "Memo",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "nama",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "nama",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d63a743a898bf29bfa07"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "jenis",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "jenis",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d63a743a898bf29bfa08"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "seksyen",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "seksyen",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d63a743a898bf29bfa09"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "app1",
+          "type": "Boolean",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_boolean",
+          "label": "app1",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d63a743a898bf29bfa0a"
+          },
+          "min": 0,
+          "max": 100000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "app2",
+          "type": "Boolean",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_boolean",
+          "label": "app2",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d63a743a898bf29bfa0b"
+          },
+          "min": 0,
+          "max": 100000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "app3",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "app3",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d63a743a898bf29bfa0c"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "nama": "CADANGAN PROGRAM LATIHAN DALAM PERKHIDMATAN LUAR NEGERI: DEEP CHANGE – TRANFORMATION MINDSET AND MANAGING CHANGE",
+          "jenis": "Memorandum",
+          "seksyen": "LDP",
+          "app1": true,
+          "app2": true,
+          "app3": false
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "seksyen",
+      "databaseName": "seksyen",
+      "displayName": "Seksyen",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "nama",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "nama",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d63a743a898bf29bfa0e"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "nama": "SBPT"
+        },
+        {
+          "nama": "BLDP"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    }
+  ]
+}
